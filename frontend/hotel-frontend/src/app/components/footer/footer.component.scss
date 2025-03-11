@@ -1,0 +1,10 @@
+//Import global styling
+@use '../../../styles.scss' as *;
+
+.footer {
+  background-color: $primary-color;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 0.9rem;
+}
