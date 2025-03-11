@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+//Color Palette
+$primary-color: #4b327a;
+$secondary-color: #ea9f2d;
+$accent-color: #442a75;
+$background-color: #ffffff;
+$muted-purple: #4a3179;
+
+// Global styles
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $background-color;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+}
