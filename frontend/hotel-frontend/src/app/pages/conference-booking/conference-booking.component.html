@@ -1,5 +1,29 @@
 <section class="conference">
-	<h1>Conference Room Booking</h1>
-	<p>Book our well-equipped conference rooms for meetings and events.</p>
-	<button routerLink="/rooms">View Available Rooms</button>
+	<div class="container">
+		<h1>Conference Room Booking</h1>
+		<p>Book our well-equipped conference rooms for meetings and events.</p>
+	
+		<!-- Booking Form -->
+		<form class="booking-form">
+			<div class="form-group">
+				<label for="date">Select Date:</label>
+				<input type="date" id="date" name="date" required />
+			</div>
+		
+			<div class="form-group">
+				<label for="attendees">Number of Attendees:</label>
+				<input type="number" id="attendees" name="attendees" min="1" required />
+			</div>
+
+			<div class="form-group">
+				<label for="duration">Duration (Hours):</label>
+				<input type="number" id="duration" min="1" required />
+			</div>
+
+			<button type="submit">Book Now</button>
+		</form>
+
+       		 <!-- View Available Rooms Button -->
+		<button routerLink="/rooms">View Available Rooms</button>
+	</div>
 </section>
