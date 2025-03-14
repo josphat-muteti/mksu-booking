@@ -1,5 +1,25 @@
 <footer class="footer">
 	<div class="container">
-		<p>&copy; 2025 Machakos University Hotel. All rights reserved.</p>
+		<!-- Footer links -->
+		<div class="footer-links">
+			<a [routerLink]="'/'" routerLinkActive="active">Home</a>
+			<a [routerLink]="'/conference-booking'" routerLinkActive="active">Conference</a>
+			<a [routerLink]="'/rooms'" routerLinkActive="active">Rooms</a>
+			<a [routerLink]="'/restaurant'" routerLinkActive="active">Restaurant</a>
+			<a [routerLink]="'/about'" routerLinkActive="active">About</a>
+			<a [routerLink]="'/contact'" routerLinkActive="active">Contact</a>
+		</div>
+
+		<!-- Contact Info -->
+		<div class="footer-contact">
+			<p>Email: info&#64;machakos.ac.ke</p>
+			<p>Phone: +254 707 274 969</p>
+			<p>Location: Machakos, Kenya<p>
+		</div>
+
+		<!-- Copyright -->
+		<div class="footer-copy">
+			<p>&copy; 2025 Machakos University Hotel. All rights reserved.</p>
+		</div>
 	</div>
 </footer>
