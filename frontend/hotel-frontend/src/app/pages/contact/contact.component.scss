@@ -1,6 +1,50 @@
 @use '../../../styles.scss' as *;
+@use "sass:color";
 
 .contact {
   text-align: center;
   padding: 50px;
+
+  .contact-info {
+    margin-bottom: 20px;
+    p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 10px;
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+    }
+
+    button {
+      background: $secondary-color;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: color.adjust($secondary-color, $lightness: -10%);
+      }
+    }
+  }
+
+  .map-container {
+    margin-top: 30px;
+    iframe {
+      border-radius: 10px;
+    }
+  }
 }
