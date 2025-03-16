@@ -10,12 +10,13 @@
 	</div>
 
 	<!-- Contact form -->
-	<form class="contact-form">
-		<input type="text" placeholder="Your Name" required />
-		<input type="email" placeholder="Your email" required />
-		<input type="text" placeholder="Subject" required />
-		<textarea placeholder="Your message" rows="5" required></textarea>
-		<button type="submit">Send Message</button>
+	<form class="contact-form" (submit)="sendMessage($event)">
+		<input type="text" placeholder="Your Name" required [(ngModel)]="name" name="name" />
+		<input type="email" placeholder="Your email" required [(ngModel)]="email" name="email" />
+		<input type="text" placeholder="Subject" required [(ngModel)]="subject" name="subject" />
+		<textarea placeholder="Your message" rows="5" required [(ngModel)]="message" name="message" name="message"></textarea>
+		<button type="submit" [disabled]="loading">{{ loading ? 'Sending...' : 'Send Message' }}</button>
+		<p *ngIf="successMessage" class="success-message">{{ successMessage }}</p> <!-- Btn shows sending when clicked and success messege after sending -->
 	</form>
 
 	<!-- Google Map -->

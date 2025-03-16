@@ -3,7 +3,7 @@
 
 .rooms {
   text-align: center;
-  padding: 50px;
+  padding: 100px 50px 50px;
 
   h1 {
     font-size: 2.5rem;
@@ -33,7 +33,7 @@
 
       img {
         width: 100%;
-        height: 180%;
+        height: auto;
         object-fit: cover;
         border-radius: 8px;
       }
@@ -51,11 +51,11 @@
       }
 
       button {
-        background: $gold-yellow;
-        color: $dark-purple;
+        background: $primary-color;
+        color: white;
         padding: 10px 15px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         font-size: 1rem;
         cursor: pointer;
         transition: background 0.3s ease-in-out;
@@ -78,7 +78,7 @@
     background: $primary-color;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 

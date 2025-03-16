@@ -1,9 +1,11 @@
+@use "sass:color";
+
 //Color Palette
 $primary-color: #4b327a;
 $secondary-color: #ea9f2d;
 $accent-color: #442a75;
-$dark-purple: #442a75;
-$gold-yellow: #ea9f2d;
+$dark-purple: #3b2366;
+$gold-yellow: #e5971d;
 $background-color: #ffffff;
 $muted-purple: #4a3179;
 
@@ -14,4 +16,56 @@ body {
   color: $primary-color;
   margin: 0;
   padding: 0;
+}
+
+// Better contrast for text
+h1, h2, h3 {
+  color: $dark-purple;
+}
+
+p {
+  color: color.adjust($primary-color, $lightness: -10%); //slightly darker
+}
+
+button {
+  background: $secondary-color;
+  color: $background-color;
+  font-weight: 600;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: color.adjust($secondary-color, $lightness: -10%);
+    transform: translateY(-2px); //lift effect
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(1px); //click effect
+  }
+}
+
+// Slight change in dark background
+.navbar, .footer {
+  background-color: $dark-purple;
+  color: white;
+}
+
+//Stays at bottom
+html, body {
+  height: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-footer {
+  margin-top: auto;
 }
